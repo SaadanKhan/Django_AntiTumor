@@ -1,0 +1,16 @@
+{% extends 'TODO_app/main.html' %}
+
+{% block content %}
+    
+<h1>Create</h1>
+
+<form method="POST" action="">
+       {% csrf_token %}
+       <!-- Its a builtin in Django, its fetch all the fields of our TASK model and show us on html page. It is done with the help of ClassBaseViews -->
+       {{form.as_p}}
+       <button type="submit" value="submit">submit</button>
+</form>
+
+<a href="{% url 'TaskList' %}">Go Back</a>
+
+{% endblock content %}
